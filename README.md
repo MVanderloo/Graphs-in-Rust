@@ -30,4 +30,8 @@ disallow duplicate vertexes and duplicate edges
     - scc() returns a graph with edges filled in between every node
     - ring() returns a graph with edges between each consecutive node including an edge from last to first
     - let g: Graph = Graph::scc('a', 'b', 'c') + Graph::ring('a', 'd', 'e')
+    - makes a graph with Edges = {(a,b), (b,c), (c,a), (a,d), (d,e), (e,a)}
+    - what other types of graphs are there?
+- how can you implement a DAG such that there are no invalid states
+- https://github.com/nrc/r4cppp/blob/master/graphs/README.md
     
