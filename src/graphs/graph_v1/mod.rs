@@ -1,16 +1,4 @@
-mod graph_v1 {
-    /**
-     * A very simple unweighted directed graph.
-     * Edge { from: usize, to: usize }
-     * Graph has methods insert and connect to create vertexes and edges respectively.
-     * Also has methods to 
-     * It is easy to reach an invalid state as everything is just inserted as is.
-     * Problems:
-     * - duplicate vertexes
-     * - duplicate edges
-     * - id limited to usize
-    **/
-
+pub mod graph_v1 {
     #[derive(Debug)]
     struct Vertex {
         pub id: usize
@@ -75,35 +63,4 @@ mod graph_v1 {
             }
         }
     }
-}
-
-use graph_v1::Graph;
-
-fn main() {
-    let g: Graph::new();
-    println!("{:?}", g);
-    g.insert(0);
-    println!("{:?}", g);
-    g.remove(0);
-    println!("{:?}", g);
-    g.insert(1);
-    println!("{:?}", g);
-    g.remove(2);
-    println!("{:?}", g);
-    g.insert(2);
-    println!("{:?}", g);
-    g.connect(1, 2);
-    println!("{:}?", g);
-    g.disconnect(1, 2);
-    println!("{:?}", g);
-    g.connect(2, 1);
-    println!("{:?}", g);
-    g.insert(3);
-    println!("{:?}", g);
-    g.insert(3);
-    println!("{:?}", g);
-    g.connect(3, 3);
-    println!("{:?}", g);
-    g.disconnect(2, 3);
-    println!("{:?}", g);
 }
